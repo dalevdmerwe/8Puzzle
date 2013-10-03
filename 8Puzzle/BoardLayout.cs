@@ -15,9 +15,13 @@ namespace _8Puzzle
             board =  new int[]{3,6,7,8,1,-1,2,5,4};
         }
 
-        public override bool Equals(object obj)
+        public bool Equals(BoardLayout compareBoard)
         {
-            return this.board == obj;
+            for (int i = 0; i < 8; i++)
+            {
+                if (this.board[i] != compareBoard.board[i]) return false;
+            }
+            return true;
         }
     }
 }
