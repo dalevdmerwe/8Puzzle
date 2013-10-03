@@ -8,12 +8,16 @@ namespace _8Puzzle
 {
     class BoardLayout
     {
-
         private int[] board;
 
         public BoardLayout()
         {
             board =  new int[]{3,6,7,8,1,-1,2,5,4};
+        }
+
+        public override bool Equals(object obj)
+        {
+            return this.board == obj;
         }
     }
 }
